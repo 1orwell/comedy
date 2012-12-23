@@ -13,7 +13,8 @@ def detail(request, quote_id):
         q = ComedyQuote.objects.get(pk=quote_id)
     except ComedyQuote.DoesNotExist:
         raise Http404
-    return render_to_response('cq/detail.html', {'quote':q})
+    return render_to_response('cq/detail.html', {'quote':q},
+            context_instance=RequestContext(request))
 
 def q_random(request):
     q_list = ComedyQuote.objects.all()
