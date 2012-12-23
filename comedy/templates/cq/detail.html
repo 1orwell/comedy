@@ -1,0 +1,18 @@
+<h1> Comedy Quote </h1>
+<ul>
+
+    <li><b> {{ quote }} </b></li>
+    <li>Source: {{ quote.source }}</li>
+    {% if quote.tv_series %}
+    <li>Series: {{ quote.tv_series }}</li>
+    {% endif %}
+    {% if quote.tv_episode %}
+    <li>Episode: {{ quote.tv_episode }}</li>
+    {% endif %}
+    {% if quote.book %}
+    <li>Book: {{ quote.book }} </li>
+    {% endif %}
+    {% if quote.author %}
+    <li>Author: {{ quote.author }} </li>
+    {% endif %}
+</ul>

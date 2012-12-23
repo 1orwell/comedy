@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ STATIC_URL }}css/cq.css" />
+<h1> Random Comedy Quote </h1> 
+<p>
+<br />
+<br />
+{% for line in quote %}
+    {{ line }}
+    <br />
+{% endfor %}
+</p>
+<br />
+<br />
+<p>
+<a href="/quotes/{{ id }}/"> more information </a> 
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;|
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="/"> another quote please</a> 
+</p>

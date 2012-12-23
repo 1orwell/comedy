@@ -1,0 +1,10 @@
+{% if quote_list %}
+    <ul>
+    {% for quote in quote_list %}
+        <li><a href="/quotes/{{ quote.id }}/">{{ quote.quote }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No quotes available.</p>
+{% endif %}
+
