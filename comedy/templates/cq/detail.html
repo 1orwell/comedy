@@ -1,19 +1,23 @@
 <link rel="stylesheet" href="{{ STATIC_URL }}css/cq.css" />
 <h1> Comedy Quote </h1>
 <ul>
-
+    <br />
     <li><b> {{ quote }} </b></li>
     <li>Source: {{ quote.source }}</li>
     {% if quote.tv_series %}
+    <br />
     <li>Series: {{ quote.tv_series }}</li>
     {% endif %}
     {% if quote.tv_episode %}
+    <br />
     <li>Episode: {{ quote.tv_episode }}</li>
     {% endif %}
     {% if quote.book %}
+    <br />
     <li>Book: {{ quote.book }} </li>
     {% endif %}
     {% if quote.author %}
+    <br />
     <li>Author: {{ quote.author }} </li>
     {% endif %}
 </ul>
