@@ -1,8 +1,20 @@
 <link rel="stylesheet" href="{{ STATIC_URL }}css/cq.css" />
 <h1> Comedy Quote </h1>
-<ul>
+<div class="center">
+<br />
+<br />
+<div class="text">
+{% for line in formatted_quote %}
+    <strong> {{ line.0 }} </strong> : 
+    {{ line.1 }}
     <br />
-    <li><b> {{ quote }} </b></li>
+    <br />
+{% endfor %}
+</div>
+<br />
+<br />
+</div>
+<ul>
     <li>Source: {{ quote.source }}</li>
     {% if quote.tv_series %}
     <br />
@@ -12,9 +24,9 @@
     <br />
     <li>Episode: {{ quote.tv_episode }}</li>
     {% endif %}
-    {% if quote.book %}
+    {% if quote.title %}
     <br />
-    <li>Episode Title: {{ quote.title }}</li>
+    <li>Title: {{ quote.title }}</li>
     {% endif %}
     {% if quote.book %}
     <br />
