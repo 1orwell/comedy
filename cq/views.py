@@ -23,7 +23,10 @@ def q_random(request):
     rand_quote_obj = q_list[ran_num]
     rand_quote = rand_quote_obj.quote
     q_lines = rand_quote.split('\n')
-    return render_to_response('cq/random.html', {'quote': q_lines, 'id':
+    no_blank_lines = [i for i in q_lines if i.strip()]
+    #raise Exception({q_lines})
+    final_list = [i.split(':') for i in no_blank_lines]
+    return render_to_response('cq/random.html', {'quote': final_list, 'id':
         rand_quote_obj.id},
             context_instance=RequestContext(request))
 

@@ -5,7 +5,9 @@
 <br />
 <div class="text">
 {% for line in quote %}
-    {{ line }}
+    <strong> {{ line.0 }} </strong> : 
+    {{ line.1 }}
+    <br />
     <br />
 {% endfor %}
 </div>
