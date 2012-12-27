@@ -1,0 +1,8 @@
+Running South
+=============
+
+python manage.py schemamigration cq --auto
+
+python manage.py migrate cq
+
+
