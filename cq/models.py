@@ -19,6 +19,7 @@ class ComedyQuote (models.Model):
     tv_episode = models.CharField("TV episode", max_length=200, blank=True)
     title = models.CharField(max_length=200, blank=True)
     author = models.CharField(max_length=200, blank=True)
+    video_link = models.CharField("Video link", max_length=500, blank=True)
     pub_date = models.DateTimeField('date published')
     def __unicode__(self):
         return self.quote

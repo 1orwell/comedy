@@ -35,3 +35,4 @@ def q_random(request):
         rand_quote_obj.id},
             context_instance=RequestContext(request))
 
+
