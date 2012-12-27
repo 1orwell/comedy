@@ -6,3 +6,17 @@ python manage.py schemamigration cq --auto
 python manage.py migrate cq
 
 
+Updating Production website
+===========================
+
+ssh phil@zeno
+su - elise
+scqv 
+ps -eaf | grep runfcgi 
+kill rootpid of runfcgi
+com 
+rm -rf staticfiles
+git pull
+python manage.py collectstatic
+
+
