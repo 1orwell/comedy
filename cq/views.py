@@ -32,7 +32,7 @@ def q_random(request):
     rand_quote = rand_quote_obj.quote
     final_list = format_quote(rand_quote)  
     return render_to_response('cq/random.html', {'quote': final_list, 'id':
-        rand_quote_obj.id},
+        rand_quote_obj.id, 'rand_quote_obj' : rand_quote_obj},
             context_instance=RequestContext(request))
 
 

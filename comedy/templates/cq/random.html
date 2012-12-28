@@ -6,7 +6,7 @@
 <br />
 <div class="text">
 {% for line in quote %}
-    <strong> {{ line.0 }} </strong> : 
+    <strong>{{ line.0 }}</strong>:
     {{ line.1 }}
     <br />
     <br />
@@ -22,4 +22,8 @@
 |
 &nbsp;
 <a href="/"> another quote please</a> 
+&nbsp;
+|
+&nbsp;
+<a href= {{ rand_quote_obj.video_link }} > watch video </a>
 </p>
