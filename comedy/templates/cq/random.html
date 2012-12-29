@@ -1,5 +1,7 @@
-<link rel="stylesheet" href="{{ STATIC_URL }}css/cq.css" />
-<h1> Random Quote </h1> 
+{% extends "base.html" %}
+{% block title %}Random Quote{% endblock %}
+{% block content %}
+<h2> Random Quote </h2> 
 <div class="center">
 <div class="box">
 <br />
@@ -17,7 +19,7 @@
 <br />
 </div>
 <p>
-<a href="/quotes/{{ id }}/"> more information </a> 
+<a href="/quotes/{{ id }}/"> details </a> 
 &nbsp;
 |
 &nbsp;
@@ -27,3 +29,4 @@
 &nbsp;
 <a href= {{ rand_quote_obj.video_link }} > watch video </a>
 </p>
+{% endblock %}

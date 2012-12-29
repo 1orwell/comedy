@@ -1,5 +1,7 @@
-<link rel="stylesheet" href="{{ STATIC_URL }}css/cq.css" />
-<h1> Quote Details </h1>
+{% extends "base.html" %}
+{% block title %}Quote Details{% endblock %}
+{% block content %}
+<h2> Quote Details </h2>
 <div class="center">
 <div class="box">
 <br />
@@ -46,3 +48,4 @@
 <a href= {{ quote.video_link }} > watch video </a>
 </p>
 </div>
+{% endblock %}
