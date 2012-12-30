@@ -19,14 +19,18 @@
 <br />
 </div>
 <p>
-<a href="/quotes/{{ id }}/"> details </a> 
+<a href="/quotes/{{ id }}/">details</a> 
 &nbsp;
 |
 &nbsp;
-<a href="/"> another quote please</a> 
+<a href="/quotes">another quote please</a> 
 &nbsp;
 |
 &nbsp;
-<a href= {{ rand_quote_obj.video_link }} > watch video </a>
+<a href= {{ rand_quote_obj.video_link }} >watch video</a>
+&nbsp;
+|
+&nbsp;
+<a href="/quotes/list">all quotes</a>
 </p>
 {% endblock %}

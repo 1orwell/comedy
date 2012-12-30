@@ -14,8 +14,6 @@
     <br />
 {% endfor %}
 </div>
-<br />
-<br />
 </div>
 <ul>
     <li>Source: {{ quote.source }}</li>
@@ -41,11 +39,15 @@
     {% endif %}
 </ul>
 <p>
-<a href="/"> another quote please</a> 
+<a href="/quotes"> another quote please</a> 
 &nbsp;
 |
 &nbsp;
 <a href= {{ quote.video_link }} > watch video </a>
+&nbsp;
+|
+&nbsp;
+<a href="/quotes/list">all quotes</a>
 </p>
 </div>
 {% endblock %}

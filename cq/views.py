@@ -10,9 +10,10 @@ def format_quote(quote):
     final_list = [i.split(':') for i in no_blank_lines]
     return final_list
 
-def home(request):
+def list(request):
     quote_list = ComedyQuote.objects.all()
-    return render_to_response('cq/home.html', {'quote_list': quote_list})
+    return render_to_response('cq/list.html', {'quote_list':quote_list},
+            context_instance=RequestContext(request))
 
 def detail(request, quote_id):
     try:
