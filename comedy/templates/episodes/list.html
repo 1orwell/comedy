@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Episode List{% endblock %}
+{% block content %}
+<h2> Episode Directory </h2> 
+{% if series_list %}
+    {% for series in series_list %}
+        <h3> Series: {{ series }} </h3>
+        {% for episode in series.episode_set.all %} 
+            <div class="text">
+            Episode: {{ episode.number }}
+            {{ episode.name }}
+            <br />
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% else %}
+    <p>No episodes available.</p>
+{% endif %}
+<p>
+<br />
+<a href="/quotes/random">random quote please</a> 
+</p>
+{% endblock %}
+

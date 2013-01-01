@@ -8,6 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^quotes/', include('cq.urls')),
+    url(r'^episodes/', include('episodes.urls')),
     url(r'^$', redirect_to, {'url': '/quotes/random'}),
     # url(r'^comedy/', include('comedy.foo.urls')),
 
