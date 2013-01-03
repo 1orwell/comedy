@@ -7,7 +7,7 @@
         <h3> Series: {{ series }} </h3>
         {% for episode in series.episode_set.all %} 
             <div class="text">
-            Episode: {{ episode.number }}
+            <a href="/episodes/{{ episode.id }}/">Episode: {{ episode.number }}</a>
             {{ episode.name }}
             <br />
             </div>

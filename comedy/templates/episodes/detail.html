@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Episode Details{% endblock %}
+{% block content %}
+<h2> Episode Details </h2>
+<div class="center">
+<div class="box">
+<br />
+<br />
+<div class="text">
+    {{ episode.plot }}
+    <br />
+    <br />
+</div>
+</div>
+<ul>
+    <li>Series: {{ episode.season }}</li>
+    <br />
+    <li>Episode: {{ episode.number }}</li>
+    <br />
+    <li>Title: {{ episode.name }}</li>
+    <br />
+    <li>Link to Video: {{ episode.video_link }} </li>
+</ul>
+<p>
+<a href="/quotes/random"> another quote please</a> 
+&nbsp;
+|
+&nbsp;
+<a href="/quotes/list">all quotes</a>
+&nbsp;
+|
+&nbsp;
+<a href="/episodes">episodes</a>
+</p>
+</div>
+{% endblock %}
