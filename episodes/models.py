@@ -14,5 +14,5 @@ class Episode(models.Model):
     plot = models.TextField()
     def __unicode__(self):
         ret_val = 'series: ' + str(self.season) + ', episode: ' + str(self.number)
-        return ret_val, self.plot
+        return ret_val
 

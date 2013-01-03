@@ -20,6 +20,8 @@ def detail(request, quote_id):
         q = ComedyQuote.objects.get(pk=quote_id)
     except ComedyQuote.DoesNotExist:
         raise Http404
+
+    #import pdb; pdb.set_trace() 
     formatted_quote = format_quote(q.quote)
     return render_to_response('cq/detail.html', {'quote':q,
         'formatted_quote':formatted_quote},
