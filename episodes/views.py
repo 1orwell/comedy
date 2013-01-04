@@ -2,6 +2,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from models import Season
 from models import Episode
+from cq.views import format_quote
 from django.http import Http404
 
 

@@ -21,14 +21,10 @@
     <br />
     <li>Series: {{ quote.tv_series }}</li>
     {% endif %}
-    {% if quote.tv_episode %}
     <br />
-    <li>Episode: {{ quote.tv_episode }}</li>
-    {% endif %}
-    {% if quote.title %}
+    <li>Episode: Series {{ episode.season }}, Episode {{episode.number}} </li>
     <br />
-    <li>Title: {{ quote.title }}</li>
-    {% endif %}
+    <li>Title: {{ episode.name }}</li>
     {% if quote.book %}
     <br />
     <li>Book: {{ quote.book }} </li>

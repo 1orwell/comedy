@@ -9,6 +9,13 @@
 <ul>
     <a href= {{ episode.video_link }} >Watch this episode</a> 
 </ul>
+<h4> quotes </h4>
+{% for q in episode.comedyquote_set.all %}
+    <a href ="/quotes/{{q.id}}">{{ q|truncatechars:60 }}</a>
+    <br />
+    <br />
+    <hr>
+{% endfor %}
 </p>
 <p>
 <a href="/quotes/random"> another quote please</a> 

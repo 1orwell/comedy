@@ -18,13 +18,13 @@ def list(request):
 def detail(request, quote_id):
     try:
         q = ComedyQuote.objects.get(pk=quote_id)
+        episode = q.episode
     except ComedyQuote.DoesNotExist:
         raise Http404
-
     #import pdb; pdb.set_trace() 
     formatted_quote = format_quote(q.quote)
     return render_to_response('cq/detail.html', {'quote':q,
-        'formatted_quote':formatted_quote},
+        'formatted_quote':formatted_quote, 'episode': episode},
             context_instance=RequestContext(request))
 
 def q_random(request):
