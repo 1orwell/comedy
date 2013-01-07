@@ -6,16 +6,18 @@
 <p>
     <h4> Plot </h4>
     <blockquote> {{ episode.plot }} </blockquote>
-<ul>
-    <a href= {{ episode.video_link }} >Watch this episode</a> 
-</ul>
 <h4> quotes </h4>
+<blockquote>
 {% for q in episode.comedyquote_set.all %}
     <a href ="/quotes/{{q.id}}">{{ q|truncatechars:60 }}</a>
     <br />
     <br />
     <hr>
-{% endfor %}
+    {% endfor %}
+</blockquote>
+<ul>
+    <p> <a href= {{ episode.video_link }} target="_blank">watch this episode</a> </p> 
+</ul>
 </p>
 <p>
 <a href="/quotes/random"> another quote please</a> 
