@@ -2,11 +2,18 @@
 {% block title %}Random Quote{% endblock %}
 {% block content %}
 <h2> Random Quote </h2> 
-<div class="center">
-<div class="box">
-<br />
-<br />
-<div class="text">
+<div class="row">
+<div class="span3">
+    <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+            <li class="nav-header">Sidebar</li>
+            <li> <a href="/quotes/{{ id }}/" >Quote Details</a></li>
+            <li> <a href="/quotes/random" >Another Quote</a></li>
+        </ul>
+</div>
+</div>
+    <div class="span9">
+<div class="well">
 {% for line in quote %}
     <strong>{{ line.0 }}</strong>:
     {{ line.1 }}
@@ -15,26 +22,5 @@
 {% endfor %}
 </div>
 </div>
-<br />
-<br />
 </div>
-<p>
-<a href="/quotes/{{ id }}/">details</a> 
-&nbsp;
-|
-&nbsp;
-<a href="/quotes/random">another quote please</a> 
-&nbsp;
-|
-&nbsp;
-<a href= {{ rand_quote_obj.episode.video_link }} target="_blank">watch video</a>
-&nbsp;
-|
-&nbsp;
-<a href="/quotes/list">all quotes</a>
-&nbsp;
-|
-&nbsp;
-<a href="/episodes">episodes</a>
-</p>
 {% endblock %}
