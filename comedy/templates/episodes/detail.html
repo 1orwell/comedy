@@ -2,33 +2,29 @@
 {% block title %}Episode Details{% endblock %}
 {% block content %}
 <h2> {{ episode.name }} (S{{ episode.season }},  Ep{{episode.number}}) </h2>
-<div class="center">
-<p>
-    <h4> Plot </h4>
-    <blockquote> {{ episode.plot }} </blockquote>
-<h4> quotes </h4>
-<blockquote>
-{% for q in episode.comedyquote_set.all %}
-    <a href ="/quotes/{{q.id}}">{{ q|truncatechars:60 }}</a>
-    <br />
-    <br />
-    <hr>
-    {% endfor %}
-</blockquote>
-<ul>
-    <p> <a href= {{ episode.video_link }} target="_blank">watch this episode</a> </p> 
-</ul>
-</p>
-<p>
-<a href="/quotes/random"> another quote please</a> 
-&nbsp;
-|
-&nbsp;
-<a href="/quotes/list">all quotes</a>
-&nbsp;
-|
-&nbsp;
-<a href="/episodes">episodes</a>
-</p>
+<div class="row">
+	<div class="span6">
+		<h4> Plot </h4>
+		<div class="well">
+			<blockquote> <p> {{ episode.plot }} </p> </blockquote>
+		</div>
+		<p><a href= {{ episode.video_link }} target="_blank" class="btn btn-primary btn-large">Watch Episode &raquo;</a></p>
+		<br />
+	</div>
+	<div class="span6">
+		<h4> Quotes </h4>
+		<div class="well">
+			<blockquote>
+				<p>
+					{% for q in episode.comedyquote_set.all %}
+					<a href ="/quotes/{{q.id}}">{{ q|truncatechars:60 }}</a>
+					<br />
+					<br />
+					<hr>
+					{% endfor %}
+				</p>
+			</blockquote>
+		</div>
+	</div>
 </div>
 {% endblock %}

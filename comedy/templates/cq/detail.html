@@ -2,40 +2,28 @@
 {% block title %}Quote Details{% endblock %}
 {% block content %}
 <h2> Quote Details </h2>
-<div class="center">
-<div class="box">
-<br />
-<br />
-<div class="text">
-{% for line in formatted_quote %}
-    <strong>{{ line.0 }}</strong>:
-    {{ line.1 }}
-    <br />
-    <br />
-{% endfor %}
-</div>
-</div>
-<ul>
-    <li>Source: {{ quote.source }}</li>
-    {% if quote.tv_series %}
-    <br />
-    <li>Series: {{ quote.tv_series }}</li>
-    {% endif %}
-    <br />
-    <li>Episode: Series {{ episode.season }}, Episode {{episode.number}} </li>
-    <br />
-    <li>Title: {{ episode.name }}</li>
-    {% if quote.book %}
-    <br />
-    <li>Book: {{ quote.book }} </li>
-    {% endif %}
-    {% if quote.author %}
-    <br />
-    <li>Author: {{ quote.author }} </li>
-    {% endif %}
-</ul>
-<p>
-</p>
+<div class="row">
+    <div class="span8">
+        <div class="well">
+            {% for line in formatted_quote %}
+            <strong>{{ line.0 }}</strong>:
+            {{ line.1 }}
+            <br />
+            <br />
+            {% endfor %}
+        </div>
+    </div>
+    <div class="span3">
+        <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+                <li class="nav-header">Sidebar</li>
+                <li> <a href="/episodes/{{ episode.id }}/" >Series {{ episode.season }}, Episode {{episode.number}}</a></li>
+                <li> <a href="/episodes/{{ episode.id }}/" >{{ episode.name }}</a></li>
+                <li> <a href= {{ episode.video_link }}
+                    target="_blank">Watch Episode</a>
+                </ul>
+            </div>
+        </div>
 </div>
 <br/>
 {% endblock %}
