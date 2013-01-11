@@ -3,26 +3,25 @@
 {% block content %}
 <h2> Random Quote </h2> 
 <div class="row">
-<div class="span3">
-    <div class="well sidebar-nav">
-        <ul class="nav nav-list">
-            <li class="nav-header">Sidebar</li>
-            <li> <a href="/quotes/{{ id }}/" >Quote Details</a></li>
-            <li> <a href="/quotes/random" >Another Quote</a></li>
-            <li> <a href= {{ rand_quote_obj.episode.video_link }}
-                target="_blank">Watch Episode</a>
-        </ul>
-</div>
-</div>
-    <div class="span9">
-<div class="well">
-{% for line in quote %}
-    <strong>{{ line.0 }}</strong>:
-    {{ line.1 }}
-    <br />
-    <br />
-{% endfor %}
-</div>
-</div>
+    <div class="span8">
+        <div class="well">
+            {% for line in quote %}
+            <strong>{{ line.0 }}</strong>:
+            {{ line.1 }}
+            <br />
+            <br />
+            {% endfor %}
+        </div>
+    </div>
+    <div class="span4">
+        <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+                <li class="nav-header">Quote Details</li>
+                <li> <a href="/episodes/{{ rand_quote_obj.episode.id }}/" >{{ rand_quote_obj.episode.name }} (S{{ rand_quote_obj.episode.season }}, Ep{{rand_quote_obj.episode.number}})</a></li>
+                <li> <a href= {{ rand_quote_obj.episode.video_link }} target="_blank">Watch Episode</a>
+                <li> <a href="/quotes/random" >Another Quote</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}

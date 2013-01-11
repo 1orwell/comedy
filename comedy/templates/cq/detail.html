@@ -13,17 +13,16 @@
             {% endfor %}
         </div>
     </div>
-    <div class="span3">
+    <div class="span4">
         <div class="well sidebar-nav">
             <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
-                <li> <a href="/episodes/{{ episode.id }}/" >Series {{ episode.season }}, Episode {{episode.number}}</a></li>
-                <li> <a href="/episodes/{{ episode.id }}/" >{{ episode.name }}</a></li>
-                <li> <a href= {{ episode.video_link }}
-                    target="_blank">Watch Episode</a>
-                </ul>
-            </div>
+                <li class="nav-header">Quote Details</li>
+                <li> <a href="/episodes/{{ episode.id }}/" >{{ episode.name }} (S{{ episode.season }}, Ep{{episode.number}})</a></li>
+                <li> <a href= {{ episode.video_link }} target="_blank">Watch Episode</a>
+                <li> <a href="/quotes/random" >Another Quote</a></li>
+            </ul>
         </div>
+    </div>
 </div>
 <br/>
 {% endblock %}

@@ -9,9 +9,8 @@
             <a href="/episodes/{{ episode.id }}/">Episode: {{ episode.number }}</a>
             {{ episode.name }}
             <br />
-            <br />
-        {% endfor %}
     {% endfor %}
+{% endfor %}
 {% else %}
 <p>No episodes available.</p>
 {% endif %}
