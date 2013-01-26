@@ -8,7 +8,10 @@
 		<div class="well">
 			<blockquote> <p> {{ episode.plot }} </p> </blockquote>
 		</div>
-		<p><a href= {{ episode.video_link }} target="_blank" class="btn btn-primary btn-large">Watch Episode &raquo;</a></p>
+		<p><a href= {{ episode.video_link }} target="_blank" class="btn
+            btn-primary btn-large">Watch Episode &raquo;</a> &nbsp; 
+        <a href= "/episodes/{{next_ep}}" class="btn btn-success btn-large">
+         Next Epsiode &raquo;</a></p> 
 		<br />
 	</div>
 	<div class="span6">

@@ -14,9 +14,14 @@ def series_list(request):
 def detail(request, episode_id):
     try:
         e = Episode.objects.get(pk=episode_id)
+        if e.id <= 23:
+            next_ep = e.id + 1
+            if next_ep == 24:
+                next_ep = 1
     except Episode.DoesNotExist:
         raise Http404
-    return render_to_response('episodes/detail.html', {'episode': e},
+    return render_to_response('episodes/detail.html', {'episode': e, 'next_ep':
+        next_ep},
         context_instance=RequestContext(request))
     
 
