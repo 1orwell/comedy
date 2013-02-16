@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Episode Details{% endblock %}
+{% block navbar_class-episodes %} active {% endblock %}
 {% block content %}
 <h2> {{ episode.name }} (S{{ episode.season }},  Ep{{episode.number}}) </h2>
 <div class="row">
@@ -7,11 +8,12 @@
 		<h4> Plot </h4>
 		<div class="well">
 			<blockquote> <p> {{ episode.plot }} </p> </blockquote>
-		</div>
-		<p><a href= {{ episode.video_link }} target="_blank" class="btn
-            btn-primary btn-large">Watch Episode &raquo;</a> &nbsp; 
-        <a href= "/episodes/{{next_ep}}" class="btn btn-success btn-large">
-         Next Epsiode &raquo;</a></p> 
+        </div>
+        <a href="/episodes/{{prev_ep}}" class="btn btn-success btn-large"> &laquo; Previous Episode</a>
+        <a href={{episode.video_link}} target="_blank" class="btn btn-primary
+            btn-large">Watch Episode</a>
+        <a href="/episodes/{{next_ep}}" class="btn btn-success btn-large">Next
+            Episode &raquo;</a>
 		<br />
 	</div>
 	<div class="span6">

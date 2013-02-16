@@ -47,13 +47,27 @@
           </a>
           <a class="brand" href="/">Jeeves and Wooster</a>
           <div class="nav-collapse collapse">
+
             <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="/episodes">Episode Directory</a></li>
-              <li><a href="/quotes">All Quotes</a></li>
-              <li><a href="/quotes/random">Random Quote</a></li>
-              <li><a href="/about">About</a></li>
+                <li class="{% block navbar_class-home %}{% endblock %}">
+                    <a href="/">Home</a>
+                </li>    
+                <li class="{% block navbar_class-episodes %}{% endblock %}">
+                    <a href="/episodes">Episode Directory</a>
+                </li>    
+                <li class="{% block navbar_class-quotes %}{% endblock %}">
+                    <a href="/quotes">All Quotes</a>
+                </li>    
+                <li class="{% block navbar_class-randomquote %}{% endblock %}">
+                    <a href="/quotes/random">Random Quotes</a>
+                </li>    
+                <li class="{% block navbar_class-about %}{% endblock %}">
+                    <a href="/about">About</a>
+                </li>    
             </ul>
+
+
+
           </div><!--/.nav-collapse -->
         </div>
       </div>

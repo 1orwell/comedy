@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% block title %}Quote List{% endblock %}
+{% block navbar_class-quotes %} active {% endblock %}
 {% block content %}
-<h2> Quote List </h2> 
+<h2> Quote List </h2>
 {% if quote_list %}
-    <ul>
     {% for quote in quote_list %}
-        <li><a href="/quotes/{{ quote.id }}/">{{ quote.quote }}</a></li>
+        <div class="row">
+            <div class="span12">
+                <div class="well">
+                    <a href="/quotes/{{ quote.id }}/"> {{quote.quote}}</a>
+                </div>
+            </div>
+        </div>
     {% endfor %}
-    </ul>
 {% else %}
     <p>No quotes available.</p>
 {% endif %}

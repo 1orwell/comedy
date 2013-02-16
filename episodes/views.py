@@ -18,10 +18,13 @@ def detail(request, episode_id):
             next_ep = e.id + 1
             if next_ep == 24:
                 next_ep = 1
+            prev_ep = e.id - 1
+            if prev_ep == 0:
+                prev_ep = 23
     except Episode.DoesNotExist:
         raise Http404
     return render_to_response('episodes/detail.html', {'episode': e, 'next_ep':
-        next_ep},
+        next_ep, 'prev_ep': prev_ep},
         context_instance=RequestContext(request))
     
 
