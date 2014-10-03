@@ -7,7 +7,7 @@ TEMPLATE_DEBUG = DEBUG
 PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Elise Ratcliffe', 'elise@eliseratcliffe.co.uk'),
 )
 
 MANAGERS = ADMINS
@@ -59,7 +59,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/home/elise/projects/comedy/staticfiles'
+STATIC_ROOT = '/home/redkestrel/projects/comedy/assets'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
